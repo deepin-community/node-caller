@@ -1,0 +1,25 @@
+Source: node-caller
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Yogiraj Kulkarni <yogirajkulkarni1411@gmail.com>
+Build-Depends: debhelper-compat (= 13)
+ , node-tape
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-caller
+Vcs-Git: https://salsa.debian.org/js-team/node-caller.git
+Homepage: https://github.com/totherik/caller
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
+
+Package: node-caller
+Architecture: all
+Depends: ${misc:Depends}
+ , nodejs
+Multi-Arch: foreign
+Description: @substack's caller.js as a module
+ Figure out your caller (thanks to @substack).
+ Caller also accepts a depth argument for tracing back further (defaults to 1).
+ .
+ Node.js is an event-based server-side JavaScript engine.

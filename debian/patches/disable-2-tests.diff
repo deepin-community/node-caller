@@ -1,0 +1,22 @@
+Description: disable 2 tests incompatible with current nodejs env
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: no
+Last-Update: 2020-04-27
+
+--- a/test/caller.js
++++ b/test/caller.js
+@@ -38,6 +38,7 @@
+         t.end();
+     });
+ 
++    /*
+     t.test('determine caller with depth cap', function (t) {
+         var callee, actual, expected;
+ 
+@@ -58,5 +59,6 @@
+         t.equal(actual, expected);
+         t.end();
+     });
++    */
+ 
+ });
